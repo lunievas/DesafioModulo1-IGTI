@@ -26,3 +26,10 @@ async function fetchUsers(){
     console.log(allUsers);
     return allUsers;
 };
+
+function filterUsers(results, indice){
+    const users = results.filter((person)=>{
+        return person.name.toLowersCase().includes(indice.toLowersCase());
+    });
+    return users;
+}
